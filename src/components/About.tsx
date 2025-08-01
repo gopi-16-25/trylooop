@@ -48,7 +48,7 @@ const About = () => {
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
             <span className="bg-gradient-primary bg-clip-text text-transparent">About</span>{" "}
-            <span className="text-foreground">Trylooop</span>
+            <span className="text-foreground">Tryloop</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
             We're dedicated to transforming passionate learners into industry-ready professionals through 
@@ -111,7 +111,7 @@ const About = () => {
           <h3 className="text-2xl lg:text-3xl font-bold mb-6 text-foreground">Our Story</h3>
           <div className="max-w-4xl mx-auto">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              Founded with the vision of democratizing technology education, Trylooop emerged from the recognition 
+              Founded with the vision of democratizing technology education, Tryloop emerged from the recognition 
               that there's a significant gap between what traditional education offers and what the industry demands. 
               Our founders, having worked in various tech companies, understood the challenges faced by aspiring 
               tech professionals.

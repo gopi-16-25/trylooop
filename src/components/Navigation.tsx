@@ -21,11 +21,11 @@ const Navigation = () => {
           <div className="flex-shrink-0 flex items-center space-x-3">
             <img 
               src="/lovable-uploads/Tryloop.png" 
-              alt="Trylooop Logo" 
+              alt="Tryloop Logo" 
               className="h-8 w-8"
             />
             <a href="#home" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              Trylooop
+              Tryloop
             </a>
           </div>
 

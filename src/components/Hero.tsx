@@ -23,7 +23,7 @@ const Hero = () => {
             </h1>
             
             <p className="text-lg sm:text-xl text-muted-foreground mb-8 max-w-2xl">
-              Transform your passion for technology into professional success. Join Trylooop for expert mentorship, 
+              Transform your passion for technology into professional success. Join Tryloop for expert mentorship, 
               hands-on learning, and career guidance that bridges the gap between ambition and achievement.
             </p>
 

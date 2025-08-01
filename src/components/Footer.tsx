@@ -48,7 +48,7 @@ const Footer = () => {
             {/* Brand Section */}
             <div className="lg:col-span-2">
               <a href="#home" className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent inline-block mb-6">
-                Trylooop
+                Tryloop
               </a>
               <p className="text-background/80 mb-6 leading-relaxed max-w-md">
                 Empowering tomorrow's tech leaders through expert mentorship, hands-on learning, 
@@ -59,7 +59,7 @@ const Footer = () => {
               <div className="space-y-3 mb-6">
                 <div className="flex items-center text-background/80">
                   <Mail className="h-5 w-5 mr-3 text-primary" />
-                  trylooop3@gmail.com
+                  Tryloop3@gmail.com
                 </div>
                 <div className="flex items-center text-background/80">
                   <Phone className="h-5 w-5 mr-3 text-primary" />
@@ -143,7 +143,7 @@ const Footer = () => {
         {/* Bottom Footer */}
         <div className="border-t border-background/20 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center text-sm text-background/80">
-            <p>&copy; 2025 Trylooop. All rights reserved.</p>
+            <p>&copy; 2025 Tryloop. All rights reserved.</p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <a href="#" className="hover:text-primary transition-colors duration-300">Privacy Policy</a>
               <a href="#" className="hover:text-primary transition-colors duration-300">Terms of Service</a>
