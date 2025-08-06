@@ -66,9 +66,10 @@ const Footer = () => {
                   +91 999492028
                 </div>
                 <div className="flex items-center text-background/80">
-                  <MapPin className="h-5 w-5 mr-3 text-primary" />
-                  San Francisco, CA
-                </div>
+  <MapPin className="h-5 w-5 mr-3 text-primary" />
+  Tirunelveli, India
+</div>
+
               </div>
 
               {/* Social Links */}
