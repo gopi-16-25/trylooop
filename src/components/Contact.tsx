@@ -47,7 +47,7 @@ const Contact = () => {
           phone: formData.phone,
           interest: formData.interest,
           message: formData.message,
-          to_email: 'Tryloop3@gmail.com'
+          to_email: 'tryloop3@gmail.com'
         },
         'MlDZ-ITH93vUuqhEt' // You'll need to replace with your EmailJS public key
       );
@@ -81,21 +81,16 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      description: "Tryloop3@gmail.com",
+      description: "tryloop3@gmail.com",
       subtitle: "We'll respond within 24 hours"
     },
     {
       icon: Phone,
       title: "Call Us",
       description: "+91 9994920208",
-      subtitle: "Mon-Fri, 9 AM - 6 PM EST"
+      subtitle: "Mon-Sat, 9 AM - 6 PM "
     },
-    {
-      icon: MapPin,
-      title: "Visit Us",
-      description: "San Francisco, CA",
-      subtitle: "Schedule an appointment"
-    },
+    
     {
       icon: Clock,
       title: "Office Hours",
