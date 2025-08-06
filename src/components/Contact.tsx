@@ -250,8 +250,7 @@ const Contact = () => {
                 </Card>
               ))}
             </div>
-
-            {/* Quick Actions */}
+{/* 
             <div className="bg-gradient-primary/10 rounded-2xl p-8">
               <h4 className="text-xl font-bold mb-4 text-foreground">Quick Actions</h4>
               <div className="space-y-4">
@@ -277,7 +276,7 @@ const Contact = () => {
                   Request a Callback
                 </Button>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

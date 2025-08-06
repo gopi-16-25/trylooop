@@ -13,7 +13,7 @@ import {
 const Footer = () => {
   const socialLinks = [
     { icon: MessageCircle, href: "https://wa.me/919994920208", label: "WhatsApp" },
-    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Instagram, href: "https://www.instagram.com/tryloop_03?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==", label: "Instagram" },
     { icon: Linkedin, href: "#", label: "LinkedIn" },
     { icon: Youtube, href: "#", label: "YouTube" },
   ];
