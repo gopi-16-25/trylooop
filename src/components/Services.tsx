@@ -12,8 +12,10 @@ import {
   Briefcase,
   ArrowRight
 } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       icon: Code,
@@ -69,7 +71,8 @@ const Services = () => {
       title: "C",
       description: "Foundational programming concepts with C language and system-level programming.",
       features: ["Basic Syntax", "Memory Management", "Data Structures", "System Programming"],
-      color: "bg-indigo-500/10 text-indigo-600"
+      color: "bg-indigo-500/10 text-indigo-600",
+      syllabus: "/courses/c/resources/syllabus"
     },
     {
       icon: Code,
@@ -119,6 +122,12 @@ const Services = () => {
     }
   ];
 
+  const handleCardClick = (syllabus: string | undefined) => {
+    if (syllabus) {
+      navigate(syllabus);
+    }
+  };
+
   return (
     <section id="services" className="py-20 bg-background">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,8 +151,9 @@ const Services = () => {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
             <Card 
-              key={index} 
-              className={`group hover:shadow-glow transition-all duration-500 border-2 hover:border-primary/50 animate-fade-in-up ${service.color.replace('/10', '/5')} shadow-lg hover:shadow-xl hover:scale-105`}
+              key={index}
+              onClick={() => handleCardClick(service.syllabus)}
+              className={`group hover:shadow-glow transition-all duration-500 border-2 hover:border-primary/50 animate-fade-in-up ${service.color.replace('/10', '/5')} shadow-lg hover:shadow-xl hover:scale-105 ${service.syllabus ? 'cursor-pointer' : ''}`}
               style={{ animationDelay: `${index * 0.1}s` }}
             >
                 <CardHeader className="pb-4">

@@ -2,8 +2,13 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useNavigate } from "react-router-dom";
 
 const Navigation = () => {
+  const navigate = useNavigate();
+  const home = () => {
+    navigate('/');
+  };
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
@@ -23,6 +28,7 @@ const Navigation = () => {
               src="/lovable-uploads/Tryloop.png" 
               alt="Tryloop Logo" 
               className="h-8 w-8"
+              onClick={() => home()}
             />
             <a href="#home" className="text-2xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               Tryloop

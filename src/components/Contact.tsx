@@ -47,7 +47,7 @@ const Contact = () => {
           phone: formData.phone,
           interest: formData.interest,
           message: formData.message,
-          to_email: 'tryloop3@gmail.com'
+          to_email: 'trylooop3@gmail.com'
         },
         'MlDZ-ITH93vUuqhEt' // You'll need to replace with your EmailJS public key
       );
@@ -81,7 +81,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email Us",
-      description: "tryloop3@gmail.com",
+      description: "trylooop3@gmail.com",
       subtitle: "We'll respond within 24 hours"
     },
     {
