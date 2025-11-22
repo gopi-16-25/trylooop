@@ -34,7 +34,7 @@ const Hero = () => {
                 className="bg-gradient-primary hover:opacity-90 transition-all duration-300 group shadow-medium"
                 onClick={() => document.getElementById('services')?.scrollIntoView({ behavior: 'smooth' })}
               >
-                Start Your Journey
+                Begin Your Journey
                 <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </div>
