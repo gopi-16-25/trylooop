@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CSyllabus from "./pages/CSyllabus";
 
+
 const queryClient = new QueryClient();
 
 const App = () => (
