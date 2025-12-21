@@ -104,42 +104,6 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Services */}
-            <div>
-              <h3 className="font-bold text-lg mb-6 text-background">Services</h3>
-              <ul className="space-y-3">
-                {services.map((service, index) => (
-                  <li key={index}>
-                    <a 
-                      href={service.href} 
-                      className="text-background/80 hover:text-primary transition-colors duration-300"
-                    >
-                      {service.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Support */}
-            <div>
-              <h3 className="font-bold text-lg mb-6 text-background">Support</h3>
-              <ul className="space-y-3">
-                {support.map((item, index) => (
-                  <li key={index}>
-                    <a 
-                      href={item.href} 
-                      className="text-background/80 hover:text-primary transition-colors duration-300"
-                    >
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        </div>
-
 
         {/* Bottom Footer */}
         <div className="border-t border-background/20 py-6">
