@@ -11,7 +11,7 @@ const Footer = () => {
   const quickLinks = [
     { label: "About Us", href: "#about" },
     { label: "Services", href: "#services" },
-    { label: "Programs", href: "#programs" }, // scroll directly
+    { label: "Programs", href: "#programs" }, 
     { label: "Contact", href: "#contact" },
   ];
 
