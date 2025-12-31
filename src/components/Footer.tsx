@@ -10,16 +10,28 @@ import {
 
 const Footer = () => {
   const socialLinks = [
-    { icon: MessageCircle, href: "https://wa.me/919994920208" },
-    { icon: Instagram, href: "https://www.instagram.com/tryloop_03" },
-    { icon: Linkedin, href: "#" },
-    { icon: Youtube, href: "#" },
+    {
+      icon: MessageCircle,
+      href: "https://wa.me/919994920208",
+    },
+    {
+      icon: Instagram,
+      href: "https://www.instagram.com/tryloop_03",
+    },
+    {
+      icon: Linkedin,
+      href: "https://www.linkedin.com/company/tryloop-tech/",
+    },
+    {
+      icon: Youtube,
+      href: "https://www.youtube.com", 
+    },
   ];
 
   const quickLinks = [
     { label: "About Us", href: "#about" },
     { label: "Services", href: "#services" },
-    { label: "Programs", href: "#services" }, 
+    { label: "Programs", href: "#services" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -54,13 +66,15 @@ const Footer = () => {
               </div>
             </div>
 
+            {/* SOCIAL ICONS */}
             <div className="flex gap-4 mt-6">
               {socialLinks.map((s, i) => (
                 <a
                   key={i}
                   href={s.href}
                   target="_blank"
-                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary/20"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary/20 transition"
                 >
                   <s.icon className="h-5 w-5" />
                 </a>
@@ -85,7 +99,6 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* EXTRA */}
           <div className="hidden lg:block">
             <h3 className="font-semibold text-lg mb-5">Why Tryloop?</h3>
             <ul className="space-y-3 text-sm text-background/70">

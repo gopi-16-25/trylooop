@@ -5,9 +5,10 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
 import CSyllabus from "./pages/CSyllabus";
-import ScrollToTopButton from "./components/ScrollToTopButton"; 
+import Careers from "./pages/Careers";
+import NotFound from "./pages/NotFound";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 const queryClient = new QueryClient();
 
@@ -22,12 +23,11 @@ const App = () => (
 
         <Routes>
           <Route path="/" element={<Index />} />
-          <Route
-            path="/courses/c/resources/syllabus"
-            element={<CSyllabus />}
-          />
+          <Route path="/courses/c/resources/syllabus" element={<CSyllabus />} />
+          <Route path="/careers" element={<Careers />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
+
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
