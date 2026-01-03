@@ -4,7 +4,6 @@ import {
   MapPin,
   Instagram,
   Linkedin,
-  Youtube,
   MessageCircle,
 } from "lucide-react";
 
@@ -23,8 +22,8 @@ const Footer = () => {
       href: "https://www.linkedin.com/company/tryloop-tech/",
     },
     {
-      icon: Youtube,
-      href: "https://www.youtube.com", 
+      icon: Phone,
+      href: "tel:+919994920208", 
     },
   ];
 

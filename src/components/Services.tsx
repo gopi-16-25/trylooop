@@ -62,31 +62,32 @@ const Services = () => {
   const handleCardClick = (syllabus?: string) => syllabus && navigate(syllabus);
 
   return (
-    <section id="services" className="py-24 bg-white">
-      <div className="container mx-auto px-6">
+    <section id="services" className="py-20 sm:py-24 bg-white">
+      <div className="container mx-auto px-4 sm:px-6">
 
         {/* Header */}
         <div
           ref={headRef}
-          className={`text-center mb-20 transition-all duration-[1600ms] ease-[cubic-bezier(.22,.61,.36,1)]
+          className={`text-center mb-14 sm:mb-20 transition-all duration-[1600ms]
           ${headShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-32"}`}
         >
-          <h2 className="text-4xl lg:text-5xl font-bold mb-6">
-            <span>Our</span> <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
+            <span>Our</span>{" "}
+            <span className="bg-gradient-primary bg-clip-text text-transparent">Services</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-sm sm:text-lg text-muted-foreground max-w-3xl mx-auto">
             Comprehensive technology education and mentorship programs designed to transform your passion into professional expertise.
           </p>
         </div>
 
         {/* Programs */}
         <div ref={progRef}>
-          <h3 className={`text-2xl lg:text-3xl font-bold text-center mb-14 transition-all duration-[1500ms]
+          <h3 className={`text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-10 sm:mb-14 transition-all duration-[1500ms]
             ${progShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
             Programs Offered
           </h3>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <Card
                 key={index}
@@ -97,18 +98,20 @@ const Services = () => {
                 hover:shadow-xl hover:scale-105 ${service.syllabus ? "cursor-pointer" : ""}`}
               >
                 <CardHeader className="pb-4">
-                  <div className="w-14 h-14 rounded-lg bg-violet-100 text-violet-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
-                    <service.icon className="h-7 w-7" />
+                  <div className="w-12 sm:w-14 h-12 sm:h-14 rounded-lg bg-violet-100 text-violet-600 flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
+                    <service.icon className="h-6 sm:h-7 w-6 sm:w-7" />
                   </div>
-                  <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">
+                  <CardTitle className="text-lg sm:text-xl group-hover:text-primary transition-colors duration-300">
                     {service.title}
                   </CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">{service.description}</p>
+                  <p className="text-sm sm:text-base text-muted-foreground mb-6 leading-relaxed">
+                    {service.description}
+                  </p>
                   <div className="space-y-2 mb-6">
                     {service.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center text-sm text-muted-foreground">
+                      <div key={idx} className="flex items-center text-xs sm:text-sm text-muted-foreground">
                         <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3" />
                         {feature}
                       </div>
@@ -123,13 +126,13 @@ const Services = () => {
         {/* Mentorship */}
         <div
           ref={mentRef}
-          className={`mt-28 bg-violet-50 rounded-3xl p-10 lg:p-14 transition-all duration-[1600ms]
+          className={`mt-20 sm:mt-28 bg-violet-50 rounded-3xl p-8 sm:p-10 lg:p-14 transition-all duration-[1600ms]
           ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-32"}`}
         >
-          <div className={`text-center mb-12 transition-all duration-[1400ms]
+          <div className={`text-center mb-10 sm:mb-12 transition-all duration-[1400ms]
             ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
-            <h3 className="text-2xl lg:text-3xl font-bold mb-4">Mentorship & Guidance</h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">Mentorship & Guidance</h3>
+            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
               Beyond technical training, we provide comprehensive mentorship and career guidance to ensure your success.
             </p>
           </div>
@@ -142,24 +145,26 @@ const Services = () => {
                 className={`text-center transition-all duration-[1400ms]
                 ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}
               >
-                <div className="flex items-center justify-center w-16 h-16 bg-gradient-primary rounded-full mb-6 mx-auto transition-transform duration-300 hover:scale-110">
-                  <service.icon className="h-8 w-8 text-white" />
+                <div className="flex items-center justify-center w-14 sm:w-16 h-14 sm:h-16 bg-gradient-primary rounded-full mb-6 mx-auto transition-transform duration-300 hover:scale-110">
+                  <service.icon className="h-7 sm:h-8 w-7 sm:w-8 text-white" />
                 </div>
-                <h4 className="text-xl font-bold mb-4">{service.title}</h4>
-                <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                <h4 className="text-lg sm:text-xl font-bold mb-4">{service.title}</h4>
+                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{service.description}</p>
               </div>
             ))}
           </div>
 
-          <div className={`text-center mt-14 transition-all duration-[1400ms]
+          <div className={`text-center mt-12 sm:mt-14 transition-all duration-[1400ms]
             ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
             <Button
               size="lg"
               className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-medium"
-              onClick={() => window.open(
-                "https://docs.google.com/forms/d/e/1FAIpQLSfOXsfQrwqSAWaMhIGeqzE-KgeC6HPa8nADOQVq1JTAUr4CtQ/viewform?usp=header",
-                "_blank"
-              )}
+              onClick={() =>
+                window.open(
+                  "https://docs.google.com/forms/d/e/1FAIpQLSfOXsfQrwqSAWaMhIGeqzE-KgeC6HPa8nADOQVq1JTAUr4CtQ/viewform?usp=header",
+                  "_blank"
+                )
+              }
             >
               Book a Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
