@@ -6,25 +6,23 @@ import {
   Linkedin,
   MessageCircle,
 } from "lucide-react";
+import { useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const location = useLocation();
+
+  if (
+    location.pathname === "/courses/c/plan" ||
+    location.pathname === "/courses/c/resources/syllabus"
+  ) {
+    return null;
+  }
+
   const socialLinks = [
-    {
-      icon: MessageCircle,
-      href: "https://wa.me/919994920208",
-    },
-    {
-      icon: Instagram,
-      href: "https://www.instagram.com/tryloop_03",
-    },
-    {
-      icon: Linkedin,
-      href: "https://www.linkedin.com/company/tryloop-tech/",
-    },
-    {
-      icon: Phone,
-      href: "tel:+919994920208", 
-    },
+    { icon: MessageCircle, href: "https://wa.me/919994920208" },
+    { icon: Instagram, href: "https://www.instagram.com/tryloop_03" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/tryloop-tech/" },
+    { icon: Phone, href: "tel:+919994920208" },
   ];
 
   const quickLinks = [
@@ -65,7 +63,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* SOCIAL ICONS */}
             <div className="flex gap-4 mt-6">
               {socialLinks.map((s, i) => (
                 <a
@@ -87,10 +84,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               {quickLinks.map((l, i) => (
                 <li key={i}>
-                  <a
-                    href={l.href}
-                    className="text-background/70 hover:text-primary transition"
-                  >
+                  <a href={l.href} className="text-background/70 hover:text-primary transition">
                     {l.label}
                   </a>
                 </li>
@@ -98,6 +92,7 @@ const Footer = () => {
             </ul>
           </div>
 
+          {/* WHY */}
           <div className="hidden lg:block">
             <h3 className="font-semibold text-lg mb-5">Why Tryloop?</h3>
             <ul className="space-y-3 text-sm text-background/70">

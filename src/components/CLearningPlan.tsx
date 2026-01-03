@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 
 // --- Data extracted from the C Learning Plan ---
 
@@ -207,12 +209,13 @@ const Header = () => (
 );
 
 const PlanTable = () => (
-  <div className="overflow-x-auto">
+<div className="w-full overflow-x-auto sm:overflow-visible -mx-3 sm:mx-0">
+
     {planData.map((weekData) => (
       <div key={weekData.week} className="mb-8">
         <h2 className="text-2xl font-semibold text-slate-900 mb-4 p-3 bg-slate-100 rounded-lg">{weekData.week}</h2>
         <div className="shadow-lg border border-slate-200 rounded-lg overflow-hidden">
-          <table className="min-w-full bg-purple-100 divide-y divide-slate-200">
+<table className="min-w-[720px] sm:min-w-[900px] bg-purple-100 divide-y divide-slate-200 text-[13px] sm:text-sm">
             <thead className="bg-slate-100">
               <tr>
                 <th scope="col" className="px-4 py-3 text-left text-xs font-medium text-slate-500 uppercase tracking-wider w-1/12">Day</th>
@@ -247,7 +250,8 @@ const PlanTable = () => (
 );
 
 const WeeklyProjects = () => (
-  <div className="space-y-6">
+<div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
+
     {projectsData.map((project) => (
       <div key={project.title} className="bg-purple-100 p-6 rounded-lg shadow-lg border border-slate-200">
         <h3 className="text-xl font-semibold text-slate-900 mb-2">{project.title}</h3>
@@ -265,8 +269,8 @@ const WeeklyProjects = () => (
 );
 
 const ResourcesAndTips = () => (
-  <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-    <div className="bg-purple-100 p-6 rounded-lg shadow-lg border border-slate-200">
+<div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div className="bg-purple-100 p-4 sm:p-6 rounded-lg shadow-lg border border-slate-200">
       <h3 className="text-xl font-semibold text-slate-900 mb-4">Learning Resources</h3>
       <div className="space-y-4">
         <div>
@@ -339,6 +343,15 @@ const TabButton = ({ label, icon, isActive, onClick }: { label: string, icon: Re
 
 export default function CLearningPlan() {
   const [activeTab, setActiveTab] = useState<TabName>('plan');
+  const navigate = useNavigate();   
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [activeTab]);
+
 
   const renderContent = () => {
     switch (activeTab) {
@@ -354,12 +367,12 @@ export default function CLearningPlan() {
   };
 
   return (
-    <div className="min-h-screen bg-purple-50 font-sans pt-16 pb-8 px-4 sm:px-8">
+<div className="min-h-screen bg-purple-50 font-sans pt-16 pb-8 px-2 sm:px-8 overflow-x-hidden">
       <div className="max-w-7xl mx-auto bg-purple-100 shadow-lg rounded-lg">
         <Header />
 
         <nav className="border-b border-purple-200 bg-purple-50">
-          <div className="p-4 flex flex-wrap gap-2">
+<div className="p-2 sm:p-4 flex flex-wrap gap-2 justify-center">
             <TabButton
               label="30-Day Plan"
               icon={<CalendarDaysIcon />}
@@ -384,6 +397,17 @@ export default function CLearningPlan() {
         <main className="p-6">
           {renderContent()}
         </main>
+        {/* BACK TO COURSES BUTTON */}
+<div className="py-10 text-center">
+  <Button
+    size="lg"
+    className="bg-purple-600 text-white hover:bg-purple-700 transition-all"
+    onClick={() => navigate("/courses")}
+  >
+    ← Back to Courses
+  </Button>
+</div>
+
 
         <footer className="border-t border-purple-200 bg-purple-50 p-6 rounded-b-lg text-center">
           <p className="text-sm text-slate-600">Happy coding! Consistency is the key to mastering C.</p>

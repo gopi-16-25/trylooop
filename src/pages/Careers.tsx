@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState, ReactNode } from "react";
 
-/* ================= LOCAL ANIMATION (NO EXTRA FILE) ================= */
 
 const Animation = ({ children, delay = 0 }: { children: ReactNode; delay?: number }) => {
   const ref = useRef<HTMLDivElement>(null);
@@ -31,9 +30,14 @@ const Animation = ({ children, delay = 0 }: { children: ReactNode; delay?: numbe
 };
 
 /* ================= CAREERS ================= */
-
-const Careers = () => {
+ const Careers = () => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+  }, []);
+
+
 
   const roles = [
     {
