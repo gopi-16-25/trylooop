@@ -20,6 +20,11 @@ const Navigation = () => {
     setIsMenuOpen(false);
   };
 
+  const goToCourses = () => {
+    navigate("/courses");
+    setIsMenuOpen(false);
+  };
+
   return (
     <>
       <nav className="fixed top-0 left-0 right-0 z-[9999] bg-white/90 backdrop-blur-md border-b border-border">
@@ -38,7 +43,7 @@ const Navigation = () => {
             <div className="hidden md:flex items-center space-x-8">
               <button onClick={() => scrollToSection("home")} className="nav-link">Home</button>
               <button onClick={() => scrollToSection("about")} className="nav-link">About</button>
-              <button onClick={() => scrollToSection("services")} className="nav-link">Programs</button>
+              <button onClick={goToCourses} className="nav-link">Courses</button>
               <button onClick={() => navigate("/careers")} className="nav-link">Careers</button>
               <button onClick={() => scrollToSection("contact")} className="nav-link">Contact</button>
             </div>
@@ -71,7 +76,7 @@ const Navigation = () => {
         <div className="px-6 pt-10 space-y-6 text-lg font-medium">
           <button onClick={() => scrollToSection("home")} className="block w-full text-left">Home</button>
           <button onClick={() => scrollToSection("about")} className="block w-full text-left">About</button>
-          <button onClick={() => scrollToSection("services")} className="block w-full text-left">Programs</button>
+          <button onClick={goToCourses} className="block w-full text-left">Courses</button>
           <button onClick={() => { navigate("/careers"); setIsMenuOpen(false); }} className="block w-full text-left">Careers</button>
           <button onClick={() => scrollToSection("contact")} className="block w-full text-left">Contact</button>
         </div>
