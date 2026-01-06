@@ -40,8 +40,8 @@ const About = () => {
       icon: Eye,
       title: "Our Vision",
       description:
-        "To bridge the gap between industry demands and talent by providing hands-on training and real-world project exposure that transforms passionate learners into industry-ready professionals."
-    },
+"To be the catalyst that empowers individuals worldwide with the skills and tools needed to navigate and innovate in a technology-driven world, creating a connected and capable society."
+ },
     {
       icon: Heart,
       title: "Our Values",
