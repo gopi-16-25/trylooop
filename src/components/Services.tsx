@@ -78,6 +78,7 @@ const Services = () => {
     </span>
   </h2>
 
+  {/* Moving Achievements Strip */}
   <div className="overflow-hidden mt-6">
     <div className="flex w-max gap-6 animate-marquee">
 
@@ -115,7 +116,13 @@ const Services = () => {
 
     </div>
   </div>
+
+  {/* Tagline */}
+  <p className="mt-6 text-sm sm:text-base font-medium text-muted-foreground max-w-2xl mx-auto">
+    Building Future Developers with Real-World Skills & Confidence
+  </p>
 </div>
+
 
         {/* Programs */}
         <div ref={progRef}>
