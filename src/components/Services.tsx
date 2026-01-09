@@ -41,17 +41,19 @@ const Services = () => {
     return () => o3.disconnect();
   }, []);
 
+  
+
   const services = [
-    { icon: Code, title: "Fullstack Web Development", description: "Complete web development training covering frontend and backend technologies for modern applications.", features: ["HTML/CSS/JavaScript", "React/Node.js", "Database Integration", "Deployment Strategies"], color: "bg-blue-500/10 text-blue-600" },
-    { icon: Brain, title: "Machine Learning and AI", description: "Comprehensive training in ML algorithms, AI concepts, and practical implementation techniques.", features: ["Supervised Learning", "Deep Learning", "Computer Vision", "NLP Applications"], color: "bg-purple-500/10 text-purple-600" },
-    { icon: Code, title: "Fullstack Python Development", description: "End-to-end Python development including web frameworks, databases, and deployment.", features: ["Django/Flask", "Database Design", "API Development", "Cloud Deployment"], color: "bg-green-500/10 text-green-600" },
-    { icon: Shield, title: "Linux", description: "Master Linux system administration, command line operations, and server management.", features: ["Command Line", "System Administration", "Shell Scripting", "Server Management"], color: "bg-orange-500/10 text-orange-600" },
-    { icon: Code, title: "C", description: "Foundational programming concepts with C language and system-level programming.", features: ["Basic Syntax", "Memory Management", "Data Structures", "System Programming"], color: "bg-indigo-500/10 text-indigo-600", syllabus: "/courses/c/resources/syllabus" },
-    { icon: Code, title: "Java", description: "Object-oriented programming with Java for enterprise application development.", features: ["OOP Concepts", "Java Collections", "Exception Handling", "Multithreading"], color: "bg-pink-500/10 text-pink-600" },
-    { icon: Users, title: "UI/UX", description: "User interface and experience design principles for creating intuitive digital products.", features: ["Design Principles", "User Research", "Prototyping", "Usability Testing"], color: "bg-teal-500/10 text-teal-600" },
-    { icon: Code, title: "C++", description: "Advanced programming with C++ for high-performance applications and system development.", features: ["Object-Oriented Programming", "STL", "Advanced Features", "Performance Optimization"], color: "bg-violet-500/10 text-violet-600" },
-    { icon: Cloud, title: "Cloud", description: "Cloud computing fundamentals with AWS, Azure, and modern cloud deployment strategies.", features: ["AWS/Azure", "Cloud Architecture", "DevOps", "Containerization"], color: "bg-cyan-500/10 text-cyan-600" }
-  ];
+  { icon: Code,title: "MERN Stack Development",description:"Comprehensive MERN Stack training covering frontend, backend, database, and deployment using modern JavaScript technologies.",features: ["HTML, CSS & JavaScript","React.js Frontend","Node.js & Express.js Backend","MongoDB Database"], color: "bg-blue-500/10 text-blue-600" },
+  { icon: Brain, title: "Machine Learning and AI", description: "Comprehensive training in ML algorithms, AI concepts, and practical implementation techniques.", features: ["Supervised Learning", "Deep Learning", "Computer Vision", "NLP Applications"], color: "bg-purple-500/10 text-purple-600" },
+  { icon: Code, title: "Fullstack Python Development", description: "End-to-end Python development including web frameworks, databases, and deployment.", features: ["Django/Flask", "Database Design", "API Development", "Cloud Deployment"], color: "bg-green-500/10 text-green-600" },
+  { icon: Shield, title: "Linux", description: "Master Linux system administration, command line operations, and server management.", features: ["Command Line", "System Administration", "Shell Scripting", "Server Management"], color: "bg-orange-500/10 text-orange-600" },
+  { icon: Code, title: "C", description: "Foundational programming concepts with C language and system-level programming.", features: ["Basic Syntax", "Memory Management", "Data Structures", "System Programming"], color: "bg-indigo-500/10 text-indigo-600", syllabus: "/courses/c/resources/syllabus" },
+  { icon: Code, title: "Java", description: "Object-oriented programming with Java for enterprise application development.", features: ["OOP Concepts", "Java Collections", "Exception Handling", "Multithreading"], color: "bg-pink-500/10 text-pink-600" },
+  { icon: Users, title: "UI/UX", description: "User interface and experience design principles for creating intuitive digital products.", features: ["Design Principles", "User Research", "Prototyping", "Usability Testing"], color: "bg-teal-500/10 text-teal-600" },
+  { icon: Code, title: "C++", description: "Advanced programming with C++ for high-performance applications and system development.", features: ["Object-Oriented Programming", "STL", "Advanced Features", "Performance Optimization"], color: "bg-violet-500/10 text-violet-600" },
+  { icon: Cloud, title: "Cloud", description: "Cloud computing fundamentals with AWS, Azure, and modern cloud deployment strategies.", features: ["AWS/Azure", "Cloud Architecture", "DevOps", "Containerization"], color: "bg-cyan-500/10 text-cyan-600" }
+];
 
   const mentorshipServices = [
     { icon: Users, title: "Expert Mentorship", description: "One-on-one guidance from industry professionals with years of experience in leading tech companies." },
@@ -68,7 +70,7 @@ const Services = () => {
     {/* Header */}
 <div
   ref={headRef}
-  className={`text-center mb-14 sm:mb-20 transition-all duration-[1600ms]
+  className={`text-center mb-14 sm:mb-20 transition-all duration-&lsqb;1600ms&rsqb;
   ${headShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-32"}`}
 >
   <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-6">
@@ -125,8 +127,8 @@ const Services = () => {
 
 
         {/* Programs */}
-        <div ref={progRef}>
-          <h3 className={`text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-10 sm:mb-14 transition-all duration-[1500ms]
+          <div ref={progRef} className="min-h-[300px]">
+          <h3 className={`text-xl sm:text-2xl lg:text-3xl font-bold text-center mb-10 sm:mb-14 transition-all duration-&lsqb;1500ms&rsqb;
             ${progShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
             Programs Offered
           </h3>
@@ -137,8 +139,8 @@ const Services = () => {
                 key={index}
                 onClick={() => handleCardClick(service.syllabus)}
                 style={{ transitionDelay: `${index * 120}ms` }}
-                className={`group bg-white border border-violet-200 hover:border-primary transition-all duration-[1400ms]
-                ${progShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-32"}
+                className={`group bg-white border border-violet-200 hover:border-primary transition-all duration-&lsqb;1400ms&rsqb;
+                ${progShow ? "opacity-100 translate-y-0" : "opacity-100 translate-y-0"}
                 hover:shadow-xl hover:scale-105 ${service.syllabus ? "cursor-pointer" : ""}`}
               >
                 <CardHeader className="pb-4">
@@ -166,55 +168,58 @@ const Services = () => {
             ))}
           </div>
         </div>
+{/* Mentorship */}
+<div
+  ref={mentRef}
+  className={`mt-20 sm:mt-28 bg-violet-50 rounded-3xl p-8 sm:p-10 lg:p-14 transition-all duration-[1600ms]
+  ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-32"}`}
+>
+  <div className={`text-center mb-10 sm:mb-12 transition-all duration-[1400ms]
+    ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
+    <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">Mentorship & Guidance</h3>
+    <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
+      Beyond technical training, we provide comprehensive mentorship and career guidance to ensure your success.
+    </p>
+  </div>
 
-        {/* Mentorship */}
-        <div
-          ref={mentRef}
-          className={`mt-20 sm:mt-28 bg-violet-50 rounded-3xl p-8 sm:p-10 lg:p-14 transition-all duration-[1600ms]
-          ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-32"}`}
-        >
-          <div className={`text-center mb-10 sm:mb-12 transition-all duration-[1400ms]
-            ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-4">Mentorship & Guidance</h3>
-            <p className="text-sm sm:text-base text-muted-foreground max-w-2xl mx-auto">
-              Beyond technical training, we provide comprehensive mentorship and career guidance to ensure your success.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {mentorshipServices.map((service, index) => (
-              <div
-                key={index}
-                style={{ transitionDelay: `${index * 120}ms` }}
-                className={`text-center transition-all duration-[1400ms]
-                ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}
-              >
-                <div className="flex items-center justify-center w-14 sm:w-16 h-14 sm:h-16 bg-gradient-primary rounded-full mb-6 mx-auto transition-transform duration-300 hover:scale-110">
-                  <service.icon className="h-7 sm:h-8 w-7 sm:w-8 text-white" />
-                </div>
-                <h4 className="text-lg sm:text-xl font-bold mb-4">{service.title}</h4>
-                <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">{service.description}</p>
-              </div>
-            ))}
-          </div>
-
-          <div className={`text-center mt-12 sm:mt-14 transition-all duration-[1400ms]
-            ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
-            <Button
-              size="lg"
-              className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-medium"
-              onClick={() =>
-                window.open(
-                  "https://docs.google.com/forms/d/e/1FAIpQLSfOXsfQrwqSAWaMhIGeqzE-KgeC6HPa8nADOQVq1JTAUr4CtQ/viewform?usp=header",
-                  "_blank"
-                )
-              }
-            >
-              Book a Consultation
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
+  <div className="grid md:grid-cols-3 gap-8">
+    {mentorshipServices.map((service, index) => (
+      <div
+        key={index}
+        style={{ transitionDelay: `${index * 120}ms` }}
+        className={`text-center transition-all duration-[1400ms]
+        ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}
+      >
+        <div className="flex items-center justify-center w-14 sm:w-16 h-14 sm:h-16 bg-gradient-primary rounded-full mb-6 mx-auto transition-transform duration-300 hover:scale-110">
+          <service.icon className="h-7 sm:h-8 w-7 sm:w-8 text-white" />
         </div>
+        <h4 className="text-lg sm:text-xl font-bold mb-4">{service.title}</h4>
+        <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
+          {service.description}
+        </p>
+      </div>
+    ))}
+  </div>
+
+  <div className={`text-center mt-12 sm:mt-14 transition-all duration-[1400ms]
+    ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
+<Button
+  size="lg"
+  className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-medium"
+  onClick={() => {
+    window.open(
+      "https://calendly.com/trylooop3/30min?month=2026-01",
+      "_blank"
+    );
+  }}
+>
+  Book a Consultation
+  <ArrowRight className="ml-2 h-5 w-5" />
+</Button>
+
+  </div>
+</div>
+
 
       </div>
     </section>
@@ -222,3 +227,4 @@ const Services = () => {
 };
 
 export default Services;
+
