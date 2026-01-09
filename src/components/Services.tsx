@@ -44,21 +44,7 @@ const Services = () => {
   
 
   const services = [
-  {
-    icon: Code,
-    title: "MERN Stack Development",
-    description:
-      "Comprehensive MERN Stack training covering frontend, backend, database, and deployment using modern JavaScript technologies.",
-    features: [
-      "HTML, CSS & JavaScript",
-      "React.js Frontend",
-      "Node.js & Express.js Backend",
-      "MongoDB Database",
-      "REST API Development",
-      "Deployment Strategies",
-    ],
-    color: "bg-blue-500/10 text-blue-600",
-  },
+  { icon: Code,title: "MERN Stack Development",description:"Comprehensive MERN Stack training covering frontend, backend, database, and deployment using modern JavaScript technologies.",features: ["HTML, CSS & JavaScript","React.js Frontend","Node.js & Express.js Backend","MongoDB Database"], color: "bg-blue-500/10 text-blue-600" },
   { icon: Brain, title: "Machine Learning and AI", description: "Comprehensive training in ML algorithms, AI concepts, and practical implementation techniques.", features: ["Supervised Learning", "Deep Learning", "Computer Vision", "NLP Applications"], color: "bg-purple-500/10 text-purple-600" },
   { icon: Code, title: "Fullstack Python Development", description: "End-to-end Python development including web frameworks, databases, and deployment.", features: ["Django/Flask", "Database Design", "API Development", "Cloud Deployment"], color: "bg-green-500/10 text-green-600" },
   { icon: Shield, title: "Linux", description: "Master Linux system administration, command line operations, and server management.", features: ["Command Line", "System Administration", "Shell Scripting", "Server Management"], color: "bg-orange-500/10 text-orange-600" },
@@ -217,18 +203,14 @@ const Services = () => {
 
   <div className={`text-center mt-12 sm:mt-14 transition-all duration-[1400ms]
     ${mentShow ? "opacity-100 translate-y-0" : "opacity-0 translate-y-24"}`}>
-
-   <Button
+<Button
   size="lg"
   className="bg-gradient-primary hover:opacity-90 transition-all duration-300 shadow-medium"
   onClick={() => {
-    // @ts-ignore
-    window.Calendly.initPopupWidget({
-      prefill: {
-        name: "",
-        email: ""
-      }
-    });
+    window.open(
+      "https://calendly.com/trylooop3/30min?month=2026-01",
+      "_blank"
+    );
   }}
 >
   Book a Consultation
